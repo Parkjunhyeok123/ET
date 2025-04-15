@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="#FFFFFF">
+
+        <!-- 원본 텍스트 -->
+        <TextView
+            android:id="@+id/originalText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎙 음성 인식 결과"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:padding="12dp"
+            android:background="#f5f5f5"
+            android:layout_marginBottom="12dp"
+            android:elevation="2dp" />
+
+        <!-- 문법 교정 텍스트 -->
+        <TextView
+            android:id="@+id/correctedText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="✅ 교정된 텍스트"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2b7a0b"
+            android:padding="12dp"
+            android:background="#e8f5e9"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone"
+            android:elevation="2dp" />
+
+        <!-- 번역 텍스트 -->
+        <TextView
+            android:id="@+id/translatedText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🌍 번역된 텍스트"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#1a237e"
+            android:padding="12dp"
+            android:background="#e3f2fd"
+            android:layout_marginBottom="12dp"
+            android:elevation="2dp" />
+
+        <!-- 언어 선택 -->
+        <Spinner
+            android:id="@+id/languageSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:padding="8dp"
+            android:layout_marginBottom="24dp" />
+
+
+        <!-- 마이크 아이콘 -->
+        <ImageView
+            android:id="@+id/micIcon"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/ic_mic_off"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="음성 인식 시작" />
+
+        <!-- 버튼 영역 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/ttsButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🔊 듣기"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/resetButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🔄 초기화"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
